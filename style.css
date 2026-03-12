@@ -7,7 +7,7 @@
 .navcontainer .tag:hover{
     background-color: rgb(155, 46, 120);
     cursor: pointer;
-
+}
 .container{
     background-color: rgb(155, 147, 188);
     font-family: 'Times New Roman ' sans-serif;
@@ -53,5 +53,4 @@ img{
     color: rgb(52, 50, 50);
     border-radius: 10px;
     padding: 5px;
-    cursor: pointer;
-}
+    cursor: pointer;}
