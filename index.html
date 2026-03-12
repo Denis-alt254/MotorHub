@@ -5,14 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motorhub</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module">
+        import {searchCar, carData} from "./data/mock_data.js"
+
+        const searchBtn = document.querySelector('#button')
+        const searchInput = document.querySelector('#search-input')
+        const searchResult = document.querySelector('#search-result')
+
+        const performSearch = (e) => {
+            console.log("Searching in", carData)
+            const value = e.target.value;
+            const filteredData = searchCar(value);
+
+            searchResult.innerHTML = filteredData
+                .map(e => `
+                    <li>${e.model}</li>
+                    <li>${e.brand}</li>
+                    <li>${e.year}</li>
+                `)
+                .join('')
+        }
+
+        searchBtn.addEventListener('click', performSearch)
+    </script>
 </head>
 <body>
     <nav class="navcontainer">
         <span>Logo</span>
         <span><a href="car.html">Cars</a></span>
         <span><a href="details.html">Details</a></span>
-        <span><input type="text" placeholder="Search for a car....."></span>
+        <input id="search-input" type="text" placeholder="Search for a car.....">
+        <button id="button">Search</button>
     </nav>
+
+    <div id="search-result"></div>
 
     <div id="morto">
         <h1>🚗 MortoHub </h1>
