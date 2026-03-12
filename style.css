@@ -1,0 +1,48 @@
+.container{
+    background-color: rgb(155, 147, 188);
+    font-family: 'Times New Roman ' sans-serif;
+    font-size: 2rem;
+    align-items: end;
+    border-radius: 10px;
+    box-shadow:  3px 3px  10px  black;
+}
+img{
+    width: auto;
+    border-radius: 10px ;
+
+
+}
+#detailsBtn{
+    background-color: tomato;
+    color: rgb(89, 87, 87);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+
+}
+#detailsBtn{
+    background-color: hsl(9, 100%, 64%);
+    color: rgb(89, 87, 87);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 1.5rem;
+
+}
+#detailsBtn:hover{
+    background-color: hsl(9, 100%, 70%);
+    color: rgb(52, 50, 50);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+
+}
+#detailsBtn:active{
+    background-color: hsl(9, 100%, 64%);
+    color: rgb(52, 50, 50);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+
+}
