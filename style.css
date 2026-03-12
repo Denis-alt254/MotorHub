@@ -1,0 +1,8 @@
+.navcontainer{
+    display: flex;
+    flex-direction:row;
+    padding: 14px;
+    border-radius: 4px;
+    justify-content: space-between;
+    background-color: rgb(226, 221, 226);
+}
