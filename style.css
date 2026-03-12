@@ -1,3 +1,12 @@
+.navcontainer{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(190, 192, 192);
+    border-radius: 4px;
+    padding: 14px;
+    justify-content: space-between;
+    text-decoration: none;
+}
 
 .navcontainer .tag{
     padding: 8px 16px;
