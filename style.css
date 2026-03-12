@@ -63,3 +63,37 @@ img{
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;}
+
+#morto, #goal{
+    background-color: rgb(255, 250, 255, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(85, 85, 85); 
+    margin: 10px;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+h1, h2{
+    text-align: center;
+    color: rgb(199, 41, 13);
+}
+input{
+    border-radius: 4px;
+    padding: 6px;
+    border: rgb(76, 76, 233);
+}
+body{
+    background-image:url(./images/carImage.jpg);
+    background-size: cover;
+}
+
+footer{
+    background-color: rgba(217, 210, 219, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
