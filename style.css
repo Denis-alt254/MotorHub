@@ -17,6 +17,13 @@
     background-color: rgb(155, 46, 120);
     cursor: pointer;
 }
+#search-result {
+    position: absolute; /* Floats over the content */
+    background: white;
+    border: 1px solid #ccc;
+    width: 300px;
+    z-index: 100;
+}
 .container{
     background-color: rgb(155, 147, 188);
     font-family: 'Times New Roman ' sans-serif;
