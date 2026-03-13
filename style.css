@@ -20,40 +20,58 @@
 #search-result {
     margin: 20px auto;
     padding: 10px;
-    max-width: 400px;
-    background: rgba(98, 64, 114, 0.9); 
+    max-width: 800px;
+    background: rgba(185, 185, 185, 0.9); 
     border-radius: 8px;
     color: #ffffff; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    transition: all 0.3s ease;
 }
 
 .result-card {
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    background-color: rgb(131, 75, 148);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+a{
+    text-decoration: none;
+}
+
+.result-card:hover{
+    transform: translateY(-5px);
 }
 
 .result-card:last-child {
     border-bottom: none;
 }
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 .container{
-    background-color: rgb(155, 147, 188);
+    width: 400px;
+    background-color: rgba(185, 185, 185, 0.9);
     font-family: 'Times New Roman ' sans-serif;
-    font-size: 2rem;
-    align-items: end;
+    font-size: 1.2rem;
+    padding: 8px;
     border-radius: 10px;
     box-shadow:  3px 3px  10px  black;
+    transition: all 0.3s ease;
+}
+.container:hover{
+    background-color: rgb(255, 255, 255, 0.9);
+    transform: translateY(-3px);
 }
 img{
-    width: auto;
+    width: 250px;
     border-radius: 10px ;
 
-
-}
-#detailsBtn{
-    background-color: tomato;
-    color: rgb(89, 87, 87);
-    border-radius: 10px;
-    padding: 5px;
-    cursor: pointer;
 
 }
 #detailsBtn{
@@ -64,7 +82,7 @@ img{
     cursor: pointer;
     border: none;
     font-size: 1.5rem;
-
+    transition: all 0.3s ease;
 }
 #detailsBtn:hover{
     background-color: hsl(9, 100%, 70%);
@@ -72,7 +90,7 @@ img{
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
-
+    transform: translateY(-3px);
 }
 #detailsBtn:active{
     background-color: hsl(9, 100%, 64%);
