@@ -1,21 +1,25 @@
 .navcontainer{
     display: flex;
     flex-direction: row;
-    background-color: rgb(190, 192, 192);
+    background-color: #fffffe;
+    color: #2b2c34;
+    box-shadow: 3px 3px 10px #2b2c34;
     border-radius: 4px;
     padding: 14px;
     justify-content: space-between;
     text-decoration: none;
-}
-
-.navcontainer .tag{
-    padding: 8px 16px;
-    border-radius: 4px;
     transition: all 0.3s ease;
 }
-.navcontainer .tag:hover{
-    background-color: rgb(155, 46, 120);
+.navcontainer:hover{
+    background-color: rgb(173, 255, 207);
+}
+#button{
+    background-color: #6246ea;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fffffe;
     cursor: pointer;
+    box-shadow: 3px 3px 5px #2b2c34;
 }
 #search-result {
     margin: 20px auto;
@@ -50,13 +54,41 @@ a{
 .result-card:last-child {
     border-bottom: none;
 }
+.rating{
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ffcc00;
+}
+.rating small{
+    color: #fff;
+    margin-left: 5px;
+    opacity: 0.8;
+}
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+.articleContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.article{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    font-size: 1rem;
+    background-color: #d1d1e9;
+    color: #2b2c34;
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+.article, #button{
+    align-items: center;
+}
 .container{
     width: 400px;
-    background-color: rgba(185, 185, 185, 0.9);
+    background-color: #d1d1e9;
     font-family: 'Times New Roman ' sans-serif;
     font-size: 1.2rem;
     padding: 8px;
@@ -75,8 +107,8 @@ img{
 
 }
 #detailsBtn{
-    background-color: hsl(9, 100%, 64%);
-    color: rgb(89, 87, 87);
+    background-color: #6246ea;
+    color: #fffffe;
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
@@ -85,32 +117,33 @@ img{
     transition: all 0.3s ease;
 }
 #detailsBtn:hover{
-    background-color: hsl(9, 100%, 70%);
-    color: rgb(52, 50, 50);
+    background-color: #d1d1e9;
+    color: #2b2c34;
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
     transform: translateY(-3px);
 }
 #detailsBtn:active{
-    background-color: hsl(9, 100%, 64%);
-    color: rgb(52, 50, 50);
+    background-color: #6246ea;
+    color: #fffffe;
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;}
 
 #morto, #goal{
-    background-color: rgb(255, 250, 255, 0.7);
+    background-color: #d1d1e9;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgb(85, 85, 85); 
-    margin: 10px;
     font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
 h1, h2{
     text-align: center;
-    color: rgb(199, 41, 13);
+    color: #2b2c34;
 }
 input{
     border-radius: 4px;
@@ -118,17 +151,28 @@ input{
     border: rgb(76, 76, 233);
 }
 body{
-    background-image:url(./images/carImage.jpg);
-    background-size: cover;
+    background-color: #fffffe;
+    text-align: center;
+    /* background-image:url(./images/carImage.jpg);
+    background-size: cover; */
 }
 
 footer{
-    background-color: rgba(217, 210, 219, 0.7);
-    padding: 10px;
-    border-radius: 10px;
-    align-items: center;
+    background-color: #2b2c34;
+    color: #fffffe;
+    width: 100%;
+    text-align: center;
+}
+.footerContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem;
+}
+.quick-links{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 8px;
+    text-align: start;
+}
+.quick-links a{
+    color: #fffffe;
 }
