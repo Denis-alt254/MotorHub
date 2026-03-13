@@ -172,7 +172,13 @@ footer{
     display: flex;
     flex-direction: column;
     text-align: start;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 .quick-links a{
+    color: #fffffe;
+}
+.quick-links a:hover{
+    text-decoration: underline;
     color: #fffffe;
 }
