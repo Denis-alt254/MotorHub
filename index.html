@@ -6,28 +6,33 @@
     <title>Motorhub</title>
     <link rel="stylesheet" href="style.css">
     <script type="module">
-        import {searchCar, carData} from "./data/mock_data.js"
+        import { searchCar, carData } from "./data/mock_data.js";
 
-        const searchBtn = document.querySelector('#button')
-        const searchInput = document.querySelector('#search-input')
-        const searchResult = document.querySelector('#search-result')
+        const searchInput = document.querySelector('#search-input');
+        const searchBtn = document.querySelector('button');
+        const searchResult = document.querySelector('#search-result');
 
-        const performSearch = (e) => {
-            console.log("Searching in", carData)
-            const value = e.target.value;
-            const filteredData = searchCar(value);
+        const handleSearch = () => {
+            const query = searchInput.value;
+            const filteredData = searchCar(query);
 
-            searchResult.innerHTML = filteredData
-                .map(e => `
-                    <li>${e.model}</li>
-                    <li>${e.brand}</li>
-                    <li>${e.year}</li>
-                `)
-                .join('')
-        }
+            if (filteredData.length === 0) {
+                searchResult.innerHTML = query ? `<p style="color: white;">No results found for "${query}"</p>` : "";
+                return;
+            }
 
-        searchBtn.addEventListener('click', performSearch)
-    </script>
+            // Using ${} for template literals
+            searchResult.innerHTML = filteredData.map(car => `
+                <div class="result-card">
+                    <strong>${car.brand} ${car.model}</strong> — ${car.year}
+                </div>
+            `).join('');
+        };
+
+        // Listen to both the button and the live typing
+        searchBtn.addEventListener('click', handleSearch);
+        searchInput.addEventListener('input', handleSearch);
+</script>
 </head>
 <body>
     <nav class="navcontainer">

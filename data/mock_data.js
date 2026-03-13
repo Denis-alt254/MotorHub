@@ -35,14 +35,15 @@ export const carData = [
 ]
 
 export const searchCar = (car) => {
-    //check for !car
-    if(!car) return []
-
     //handle case-sensitive in search
-    const lowerCaseCar = car.toLowerCase()
+    const lowerCaseCar = car.toLowerCase().trim()
+
+    //check for !car
+    if(!lowerCaseCar) return []
 
     return carData.filter(item => {
-        item.model.toLocaleLowerCase().includes(lowerCaseCar)
-        item.brand.toLocaleLowerCase().includes(lowerCaseCar)
+        const modelMatch = item.model.toLocaleLowerCase().includes(lowerCaseCar)
+        const brandMatch = item.brand.toLocaleLowerCase().includes(lowerCaseCar)
+        return modelMatch || brandMatch
     })
 }
