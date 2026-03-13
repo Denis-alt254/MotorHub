@@ -18,11 +18,21 @@
     cursor: pointer;
 }
 #search-result {
-    position: absolute; /* Floats over the content */
-    background: white;
-    border: 1px solid #ccc;
-    width: 300px;
-    z-index: 100;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 400px;
+    background: rgba(98, 64, 114, 0.9); 
+    border-radius: 8px;
+    color: #ffffff; 
+}
+
+.result-card {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.result-card:last-child {
+    border-bottom: none;
 }
 .container{
     background-color: rgb(155, 147, 188);
