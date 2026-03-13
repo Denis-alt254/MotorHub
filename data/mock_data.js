@@ -6,7 +6,7 @@ export const carData = [
         brand: "Mazda",
         year: 2025,
         transmission: "Automatic",
-        reliability: "4.5",
+        reliability: "4.3",
         topSpeed: "180km/h",
         sparePartsAvailability: "Easily Available"
     },
@@ -17,7 +17,7 @@ export const carData = [
         brand: "Toyota",
         year: 2025,
         transmission: "Automatic",
-        reliability: "4.5",
+        reliability: "4.4",
         topSpeed: "180km/h",
         sparePartsAvailability: "Easily Available"
     },
@@ -39,7 +39,7 @@ export const carData = [
         brand: "Toyota",
         year: 2025,
         transmission: "Automatic",
-        reliability: "4.5",
+        reliability: "4.6",
         topSpeed: "180km/h",
         sparePartsAvailability: "Easily Available"
     },
@@ -50,7 +50,7 @@ export const carData = [
         brand: "Toyota",
         year: 2025,
         transmission: "Automatic",
-        reliability: "4.5",
+        reliability: "4.8",
         topSpeed: "180km/h",
         sparePartsAvailability: "Easily Available"
     },
@@ -61,7 +61,7 @@ export const carData = [
         brand: "Ford",
         year: 2025,
         transmission: "Automatic",
-        reliability: "4.5",
+        reliability: "3.2",
         topSpeed: "180km/h",
         sparePartsAvailability: "Easily Available"
     }
