@@ -24,8 +24,41 @@ export const carData = [
     {
         engine: "2.0L Petrol Engine",
         fuelConsumption: "6.5L / 100km",
-        model: "V8",
+        model: "Corolla",
         brand: "Macendese",
+        year: 2025,
+        transmission: "Automatic",
+        reliability: "4.5",
+        topSpeed: "180km/h",
+        sparePartsAvailability: "Easily Available"
+    },
+    {
+        engine: "2.0L Petrol Engine",
+        fuelConsumption: "6.5L / 100km",
+        model: "Corolla",
+        brand: "Toyota",
+        year: 2025,
+        transmission: "Automatic",
+        reliability: "4.5",
+        topSpeed: "180km/h",
+        sparePartsAvailability: "Easily Available"
+    },
+    {
+        engine: "2.0L Petrol Engine",
+        fuelConsumption: "6.5L / 100km",
+        model: "V8",
+        brand: "Toyota",
+        year: 2025,
+        transmission: "Automatic",
+        reliability: "4.5",
+        topSpeed: "180km/h",
+        sparePartsAvailability: "Easily Available"
+    },
+    {
+        engine: "2.0L Petrol Engine",
+        fuelConsumption: "6.5L / 100km",
+        model: "V8",
+        brand: "Ford",
         year: 2025,
         transmission: "Automatic",
         reliability: "4.5",
