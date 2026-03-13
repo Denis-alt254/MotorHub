@@ -8,54 +8,83 @@
 </head>
 <body>
 
-<div class="container">
+    <h2>Car Details</h2>
 
-<h2>Car Details</h2>
+    <div class="grid-container">
+        
+        <div class="container">
 
-<img src="C:\Users\brian\OneDrive\Desktop\MotorHub\images" 
-alt="Toyota Corolla" width="400">
+            <img src="./images/toyotaCorolla.jpg" 
+            alt="Toyota Corolla">
 
-<br><br>
+            <br><br>
 
-<button id="detailsBtn" onclick="showDetails()">Show Car Details</button>
+            <button id="detailsBtn" onclick="showDetails()">Show Car Details</button>
 
 
-<div id="carInfo"></div>
+            <div id="carInfo"></div>
 
-</div>
+        </div>
+        <div class="container">
 
-<script >
-    function showDetails(){
+            <img src="./images/toyotaCorolla.jpg" 
+            alt="Toyota Corolla">
 
-const info = document.getElementById("carInfo")
-const button = document.getElementById("detailsBtn")
+            <br><br>
 
-if(info.innerHTML === ""){
+            <button id="detailsBtn" onclick="showDetails()">Show Car Details</button>
 
-info.innerHTML = `
-<h3>Car Specifications</h3>
 
-<ul>
-<li><strong>Engine:</strong> 2.0L Petrol Engine</li>
-<li><strong>Fuel Consumption:</strong> 6.5L / 100km</li>
-<li><strong>Transmission:</strong> Automatic</li>
-<li><strong>Reliability:</strong> 4.5 / 5</li>
-<li><strong>Top Speed:</strong> 180 km/h</li>
-<li><strong>spareparts Availability:</strong>Easly  available</li>
-</ul>
-`
+            <div id="carInfo"></div>
 
-button.innerText = "Hide Details"
+        </div>
+        <div class="container">
 
-}else{//this is what shows when the button isnt active 
+            <img src="./images/toyotaCorolla.jpg" 
+            alt="Toyota Corolla">
 
-info.innerHTML = ""
-button.innerText = "Show Details"
+            <br><br>
 
-}
+            <button id="detailsBtn" onclick="showDetails()">Show Car Details</button>
 
-}
-</script>
+
+            <div id="carInfo"></div>
+
+        </div>
+    </div>
+
+    <script >
+        function showDetails(){
+
+        const info = document.getElementById("carInfo")
+        const button = document.getElementById("detailsBtn")
+
+        if(info.innerHTML === ""){
+
+            info.innerHTML = `
+            <h3>Car Specifications</h3>
+
+            <ul>
+            <li><strong>Engine:</strong> 2.0L Petrol Engine</li>
+            <li><strong>Fuel Consumption:</strong> 6.5L / 100km</li>
+            <li><strong>Transmission:</strong> Automatic</li>
+            <li><strong>Reliability:</strong> 4.5 / 5</li>
+            <li><strong>Top Speed:</strong> 180 km/h</li>
+            <li><strong>spareparts Availability:</strong>Easly  available</li>
+            </ul>
+            `
+
+            button.innerText = "Hide Details"
+
+        }else{//this is what shows when the button isnt active 
+
+            info.innerHTML = ""
+            button.innerText = "Show Details"
+
+        }
+
+        }
+    </script>
 
 </body>
 </html>
