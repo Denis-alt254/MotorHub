@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motorhub</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
     <script type="module">
         import { searchCar, carData } from "./data/mock_data.js";
 
@@ -27,6 +28,10 @@
                     <span>Brand: ${car.brand}</span>
                     <span>Model: ${car.model}</span>
                     <span>Year: ${car.year}</span>
+                    <div class="rating">
+                        ${getStars(car.reliability)}
+                        <small>(${car.reliability})</small>
+                    </div>
                     <a href="details.html">more details...</a>
                 </div>
             `).join('');
@@ -48,29 +53,90 @@
 
     <div id="search-result"></div>
 
-    <div id="morto">
-        <h1>🚗 MortoHub </h1>
+    <h1>🚗 MortoHub </h1>
+    <h2>Find Everything You Need to Know About a Car Before You Buy</h2>
 
-    <p>MortoHub is a web platform that helps users <br>
-    <ul><li>research</li>
-    <li>Compare</li>
-    <li>evaluate cars  buying or mauntaining them</li></ul></p>
+    <h3>MortoHub helps you research vehicles with real data on prices, fuel consumption, reliability, 
+        and spare parts availability — all in one place.</h3>
+    
+    <button id="button">Explore Vehicles</button>
 
-    <p>The system provides centralized information about vehicles including <strong>price estimates, fuel consumption, reliability, spare parts availability, and user ratings</strong>.</p>
+    <div class="articleContainer">
+        <article class="article">
+            <h2>Buying a Car Shouldn't Be Guesswork</h2>
 
+            <p>Before buying a car, people often spend hours searching multiple 
+                websites trying to answer simple questions:</p>
+                <ul>
+                    <li>Is the car reliable?</li>
+                    <li>How much fuel does it consume?</li>
+                    <li>Are spare parts easy to find?</li>
+                    <li>What is the real market price?</li>
+                </ul>
+            <p>Important information is scattered everywhere.</p>
+            <p>MortoHub solves this by bringing <strong>all the 
+                essential car information into one simple platform.</strong></p>
+        </article>
+        
+        <article class="article">
+            <h2>One Platform for Complete Car Insights</h2>
+            <p>MortoHub provides a centralized platform where users can quickly search vehicles and view the 
+                most important information needed before 
+                purchasing or maintaining a car.</p>
+            <p>Instead of browsing multiple sites, MortoHub gives you <strong>clear, structured car insights in seconds.</strong></p>
+        </article>
+
+        <article class="article">
+            <h2>Smart Car Search</h2>
+            <p>Quickly search vehicles by brand, model, or year to find the car you're researching.</p>
+        </article>
+
+        <article class="article">
+            <h2>Make Better Buying Decisions</h2>
+            <p>Get access to important vehicle insights before spending your money.</p>
+        </article>
+
+        <article class="article">
+            <h2>Start Your Car Research Today</h2>
+            <p>Stop guessing about vehicles.</p>
+            <p>Use MortoHub to access reliable car insights in seconds.</p>
+            <button id="button">Search Cars Now</button>
+        </article>
+
+        <article class="article">
+            <h2>About MortoHub</h2>
+            <p>MortoHub is a platform designed to make car research simple and transparent.</p>
+            <p>Our mission is to provide reliable vehicle information so buyers 
+                and owners can make smarter automotive decisions.</p>
+
+        </article>
     </div>
 
-    <div id="goal">
-        <h2>Goal</h2>
-        The goal of MortoHub is to make it easier for people to <strong>make informed decisions about vehicles</strong> by providing essential car data in one place.
-    </div>
     <footer>
-        <span><a href="car.html">Cars</a></span>
-        <span><a href="details.html">Details</a></span>
-        <span><a href="./pages/contact.html">Contact Us</a></span>
-        <span><a href="./pages/earn.html">Earn With MortoHub</a></span>
-        <span><a href="./pages/about.html">About Us</a></span>
-        <span><a href="./pages/chat.html">Chat With Us</a></span>
+        <div class="footerContainer">
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="car.html">Cars</a>
+                <a href="details.html">Car Details</a>
+                <a href="./pages/contact.html">Contact Us</a>
+                <a href="./pages/earn.html">Earn With MortoHub</a>
+                <a href="./pages/chat.html">Chat With Us</a>
+            </div>
+            <div class="quick-links">
+                <h3>Resources</h3>
+                <a href="">Car Research</a>
+                <a href="">Vehicle Reviews</a>
+                <a href="">Reliability Ratings</a>
+            </div>
+            <div class="quick-links">
+                <h3>Company</h3>
+                <a href="./pages/about.html">About MortoHub</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms of Service</a>
+            </div>
+        </div>
+        <p>© 2026 MortoHub. All rights reserved.</p>
     </footer>
 </body>
 </html>
