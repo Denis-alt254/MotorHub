@@ -24,7 +24,10 @@
             // Using ${} for template literals
             searchResult.innerHTML = filteredData.map(car => `
                 <div class="result-card">
-                    <strong>${car.brand} ${car.model}</strong> — ${car.year}
+                    <span>Brand: ${car.brand}</span>
+                    <span>Model: ${car.model}</span>
+                    <span>Year: ${car.year}</span>
+                    <a href="details.html">more details...</a>
                 </div>
             `).join('');
         };
