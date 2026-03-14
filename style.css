@@ -16,10 +16,16 @@
 #button{
     background-color: #6246ea;
     border-radius: 4px;
-    text-decoration: none;
     color: #fffffe;
+    border: none;
+    font-size: 1.2rem;
     cursor: pointer;
-    box-shadow: 3px 3px 5px #2b2c34;
+    transition: all 0.3s ease;
+}
+#button:hover{
+    background-color: #d1d1e9;
+    color: #2b2c34;
+    transform: translateY(-3px);
 }
 #search-result {
     margin: 20px auto;
@@ -71,6 +77,13 @@ a{
 .articleContainer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    opacity: 0.5;
+    transform: translateY(80px);
+    transition: all 0.8s ease-out;
+}
+.articleContainer.active{
+    opacity: 1;
+    transform: translateY(0);
 }
 .article{
     display: flex;
@@ -162,6 +175,13 @@ footer{
     color: #fffffe;
     width: 100%;
     text-align: center;
+    opacity: 0.5;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+footer.active{
+    opacity: 1;
+    transform: translateY(0);
 }
 .footerContainer{
     display: grid;
