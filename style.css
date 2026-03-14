@@ -175,8 +175,9 @@ footer{
     color: #fffffe;
     width: 100%;
     text-align: center;
+    margin-top: 1rem;
     opacity: 0.5;
-    transform: translateY(30px);
+    transform: translateY(80px);
     transition: all 0.8s ease;
 }
 footer.active{
