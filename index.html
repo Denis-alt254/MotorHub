@@ -5,42 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motorhub</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
-    <script type="module">
-        import { searchCar, carData } from "./data/mock_data.js";
-
-        const searchInput = document.querySelector('#search-input');
-        const searchBtn = document.querySelector('button');
-        const searchResult = document.querySelector('#search-result');
-
-        const handleSearch = () => {
-            const query = searchInput.value;
-            const filteredData = searchCar(query);
-
-            if (filteredData.length === 0) {
-                searchResult.innerHTML = query ? `<p style="color: white;">No results found for "${query}"</p>` : "";
-                return;
-            }
-
-            // Using ${} for template literals
-            searchResult.innerHTML = filteredData.map(car => `
-                <div class="result-card">
-                    <span>Brand: ${car.brand}</span>
-                    <span>Model: ${car.model}</span>
-                    <span>Year: ${car.year}</span>
-                    <div class="rating">
-                        ${getStars(car.reliability)}
-                        <small>(${car.reliability})</small>
-                    </div>
-                    <a href="details.html">more details...</a>
-                </div>
-            `).join('');
-        };
-
-        // Listen to both the button and the live typing
-        searchBtn.addEventListener('click', handleSearch);
-        searchInput.addEventListener('input', handleSearch);
-</script>
 </head>
 <body>
     <nav class="navcontainer">
@@ -139,4 +103,5 @@
         <p>© 2026 MortoHub. All rights reserved.</p>
     </footer>
 </body>
+<script type="module" src="main.js"></script>
 </html>
