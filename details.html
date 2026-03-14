@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Car Details</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navcontainer">
+        <span><a href="index.html">Logo</a></span>
+        <span><a href="car.html">Cars</a></span>
+        <span><a href="details.html">Details</a></span>
+        <input id="search-input" type="text" placeholder="Search for a car.....">
+        <button id="button">Search</button>
+    </nav>
+
+    <div id="search-result"></div>
 
     <h2>Car Details</h2>
 
@@ -53,6 +62,33 @@
         </div>
     </div>
 
+    <footer>
+        <div class="footerContainer">
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="car.html">Cars</a>
+                <a href="details.html">Car Details</a>
+                <a href="./pages/contact.html">Contact Us</a>
+                <a href="./pages/earn.html">Earn With MortoHub</a>
+                <a href="./pages/chat.html">Chat With Us</a>
+            </div>
+            <div class="quick-links">
+                <h3>Resources</h3>
+                <a href="">Car Research</a>
+                <a href="">Vehicle Reviews</a>
+                <a href="">Reliability Ratings</a>
+            </div>
+            <div class="quick-links">
+                <h3>Company</h3>
+                <a href="./pages/about.html">About MortoHub</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms of Service</a>
+            </div>
+        </div>
+        <p>© 2026 MortoHub. All rights reserved.</p>
+    </footer>
+
     <script >
         function showDetails(){
 
@@ -87,4 +123,5 @@
     </script>
 
 </body>
+<script type="module" src="main.js"></script>
 </html>
