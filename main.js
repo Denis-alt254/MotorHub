@@ -1,5 +1,20 @@
 import { searchCar, carData } from "./data/mock_data.js";
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting){
+            entry.target.classList.add('active');
+        }
+    });
+},{threshold: 0.2});
+
+const hiddenElements = document.querySelectorAll('.articleContainer');
+const hiddenContainers = document.querySelectorAll('.grid-container')
+const hiddenElementsfooter = document.querySelectorAll("footer")
+hiddenElements.forEach((el) => observer.observe(el))
+hiddenContainers.forEach((el) => observer.observe(el))
+hiddenElementsfooter.forEach((el) => observer.observe(el))
+
 const getStars = (rating) => {
     const rounded = Math.round(rating);
 
@@ -39,15 +54,26 @@ const handleSearch = () => {
 searchBtn.addEventListener('click', handleSearch);
 searchInput.addEventListener('input', handleSearch);       
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting){
-            entry.target.classList.add('active');
-        }
-    });
-},{threshold: 0.2});
+const displayResult = document.querySelector('.grid-container')
 
-const hiddenElements = document.querySelectorAll('.articleContainer');
-const hiddenElementsfooter = document.querySelectorAll("footer")
-hiddenElements.forEach((el) => observer.observe(el))
-hiddenElementsfooter.forEach((el) => observer.observe(el))
+const displayCars = (carData) => {
+    displayResult.innerHTML = carData.map((car) => `
+        <div class="container">
+            <div><img src=${car.image}></img></div>
+            <span>Brand: ${car.brand}</span>
+            <span>Model: ${car.model}</span>
+            <span>Year: ${car.year}</span>
+            <span>Engine: ${car.engine}</span>
+            <span>FuelConsumption: ${car.fuelConsumption}</span>
+            <span>Transmission: ${car.transmission}</span>
+            <span>TopSpeed: ${car.topSpeed}</span>
+            <span>SparePartsAvailability: ${car.sparePartsAvailability}</span>
+            <div class="rating">
+                ${getStars(car.reliability)}
+                <small>(${car.reliability})</small>
+            </div>
+            </div>
+        `).join('')
+};
+
+displayCars(carData)
