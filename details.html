@@ -20,46 +20,9 @@
     <h2>Car Details</h2>
 
     <div class="grid-container">
-        
-        <div class="container">
 
-            <img src="./images/toyotaCorolla.jpg" 
-            alt="Toyota Corolla">
+        <div class="container"></div>
 
-            <br><br>
-
-            <button id="detailsBtn" onclick="showDetails()">Show Car Details</button>
-
-
-            <div id="carInfo"></div>
-
-        </div>
-        <div class="container">
-
-            <img src="./images/toyotaCorolla.jpg" 
-            alt="Toyota Corolla">
-
-            <br><br>
-
-            <button id="detailsBtn" onclick="showDetails()">Show Car Details</button>
-
-
-            <div id="carInfo"></div>
-
-        </div>
-        <div class="container">
-
-            <img src="./images/toyotaCorolla.jpg" 
-            alt="Toyota Corolla">
-
-            <br><br>
-
-            <button id="detailsBtn" onclick="showDetails()">Show Car Details</button>
-
-
-            <div id="carInfo"></div>
-
-        </div>
     </div>
 
     <footer>
@@ -88,39 +51,6 @@
         </div>
         <p>© 2026 MortoHub. All rights reserved.</p>
     </footer>
-
-    <script >
-        function showDetails(){
-
-        const info = document.getElementById("carInfo")
-        const button = document.getElementById("detailsBtn")
-
-        if(info.innerHTML === ""){
-
-            info.innerHTML = `
-            <h3>Car Specifications</h3>
-
-            <ul>
-            <li><strong>Engine:</strong> 2.0L Petrol Engine</li>
-            <li><strong>Fuel Consumption:</strong> 6.5L / 100km</li>
-            <li><strong>Transmission:</strong> Automatic</li>
-            <li><strong>Reliability:</strong> 4.5 / 5</li>
-            <li><strong>Top Speed:</strong> 180 km/h</li>
-            <li><strong>spareparts Availability:</strong>Easly  available</li>
-            </ul>
-            `
-
-            button.innerText = "Hide Details"
-
-        }else{//this is what shows when the button isnt active 
-
-            info.innerHTML = ""
-            button.innerText = "Show Details"
-
-        }
-
-        }
-    </script>
 
 </body>
 <script type="module" src="main.js"></script>
