@@ -1,5 +1,6 @@
 export const carData = [
     {
+        image: "images/toyotaCorolla.jpg",
         engine: "2.0L Petrol Engine",
         fuelConsumption: "6.5L / 100km",
         model: "Ford",
@@ -11,6 +12,7 @@ export const carData = [
         sparePartsAvailability: "Easily Available"
     },
     {
+        image: "images/toyotaCorolla.jpg",
         engine: "2.0L Petrol Engine",
         fuelConsumption: "6.5L / 100km",
         model: "Brado",
@@ -22,6 +24,7 @@ export const carData = [
         sparePartsAvailability: "Easily Available"
     },
     {
+        image: "images/toyotaCorolla.jpg",
         engine: "2.0L Petrol Engine",
         fuelConsumption: "6.5L / 100km",
         model: "Corolla",
@@ -33,6 +36,7 @@ export const carData = [
         sparePartsAvailability: "Easily Available"
     },
     {
+        image: "images/toyotaCorolla.jpg",
         engine: "2.0L Petrol Engine",
         fuelConsumption: "6.5L / 100km",
         model: "Corolla",
@@ -44,6 +48,7 @@ export const carData = [
         sparePartsAvailability: "Easily Available"
     },
     {
+        image: "images/toyotaCorolla.jpg",
         engine: "2.0L Petrol Engine",
         fuelConsumption: "6.5L / 100km",
         model: "V8",
@@ -55,6 +60,7 @@ export const carData = [
         sparePartsAvailability: "Easily Available"
     },
     {
+        image: "images/toyotaCorolla.jpg",
         engine: "2.0L Petrol Engine",
         fuelConsumption: "6.5L / 100km",
         model: "V8",
